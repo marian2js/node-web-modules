@@ -12,7 +12,7 @@ var express = require('express')
 	, site = require('./config.json')
 	, redis = require('./lib/redis_connect')()
 	, cron = require('./lib/cron_task')()
-	//, github = require('./lib/github_api')()
+	, github = require('./lib/github_api')()
 	, app = module.exports = express()
 ;
 
