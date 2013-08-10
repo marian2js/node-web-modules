@@ -1,4 +1,5 @@
 global.NWM = 'NWM';
+global.MODULES = [];
 
 const PORT = (process.env.PORT || 3000)
 		, VIEWS = __dirname + '/views'
@@ -23,15 +24,24 @@ app.use(app.router);
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/', function(req, res) {
-	redis.zrevrange(NWM, 0, -1, function(err, modules) {
-		var max = modules.length
-			, domain = (req.protocol+'://'+req.host);
-		for(var i = 0; i < max; i++) {
-			modules[i] = JSON.parse(modules[i]);
-		}
-		var params = {site: site, modules: modules, domain: domain};
-		res.render('application', params);
-	});
+	var domain = (req.protocol+'://'+req.host);
+	if(MODULES && MODULES.length) {
+		// Memory Render
+		console.log('Memory render');
+		var params = {site: site, modules: MODULES, domain: domain};
+		return res.render('application', params);
+	} else {
+		redis.zrevrange(NWM, 0, -1, function(err, modules) {
+			// Redis Render
+			console.log('Redis render');
+			var max = modules.length
+			for(var i = 0; i < max; i++) {
+				MODULES[i] = JSON.parse(modules[i]);
+			}
+			var params = {site: site, modules: MODULES, domain: domain};
+			return res.render('application', params);
+		});	
+	}
 });
 
 app.listen(PORT, function() {
