@@ -4,10 +4,7 @@ var Monitor = forever.Monitor;
 var child = new Monitor('app.js', {
   max: 10,
   silent: false,
-  killTree: true,
-  logFile: 'forever.log',
-  outFile: 'app.log',
-  errFile: 'error.log'
+  killTree: true
 });
 
 child.on('exit', function () {
