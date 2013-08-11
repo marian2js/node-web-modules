@@ -8,11 +8,12 @@ const PORT = (process.env.PORT || 3000)
 		, MAXAGE = {maxAge: 60 * 60 * 1000}
 		, GZIP = {level: 9, memLevel: 9}
 
+require('./lib/module_info')()
+
 var express = require('express')
 	, site = require('./config.json')
 	, redis = require('./lib/redis_connect')()
 	, cron = require('./lib/cron_task')()
-	, github = require('./lib/github_api')()
 	, app = module.exports = express()
 ;
 

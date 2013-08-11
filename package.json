@@ -14,7 +14,8 @@
     "hiredis": "~0.1.x",
     "ejs": "~0.8.x",
     "cron": "~1.0.x",
-    "moment": "~2.1.x"
+    "moment": "~2.1.x",
+    "npm": "~1.3.7"
   },
   "devDependencies": {
     "grunt-contrib-concat": "~0.3.0",
