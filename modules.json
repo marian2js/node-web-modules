@@ -16,4 +16,10 @@
 	, "spludo": "DracoBlue/spludo"
 	, "strata": "mjijackson/strata"
 	, "hapi": "spumko/hapi"
+	, "socket.io": "learnboost/socket.io"
+	, "zappajs": "zappajs/zappajs"
+	, "tower": "tower/tower"
+	, "trinte": "biggora/trinte"
+	, "webjs": "iwillwen/webjs"
+	, "QuickWeb": "leizongmin/QuickWeb"
 }
