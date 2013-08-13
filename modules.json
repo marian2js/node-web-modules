@@ -21,4 +21,5 @@
 	, "tower": "tower/tower"
 	, "trinte": "biggora/trinte"
 	, "webjs": "iwillwen/webjs"
+	, "express.io": "techpines/express.io"
 }
