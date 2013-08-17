@@ -4,36 +4,36 @@
 			<h1><%=: repo.name | capitalize %></h1>
 		</header>
 		<div class="box__main js-web-module-main">
-			<article class="box__content">
+			<section class="box__content">
 				<figure class="box__figure">
 					<a href="<%= repo.url %>" target="_blank">
 						<img src="<%= repo.image %>" class="box__image" width="220" height="160">
 					</a>
-					<div class="box__detail">
-						<span><%= repo.description %></span>
-						<span>
-							<strong>Author:</strong>
-							<a href="<%= repo.author_url %>" target="_blank"><%=: repo.author | capitalize%></a>
-						</span>
-						<span>
-							<strong>Watchers:</strong>
-							<%= repo.watchers %>
-						</span>
-						<span>
-							<strong>Since:</strong>
-							<%= repo.created_at %>
-						</span>
-						<span>
-							<strong>Forks:</strong>
-							<%= repo.forks %>
-						</span>
-						<span>
-							<strong>Open issues:</strong>
-							<%= repo.issues %>
-						</span>
-					</div>
 				</figure>
-			</article>
+				<article class="box__detail">
+					<span><%= repo.description %></span>
+					<span>
+						<strong>Author:</strong>
+						<a href="<%= repo.author_url %>" target="_blank"><%=: repo.author | capitalize%></a>
+					</span>
+					<span>
+						<strong>Watchers:</strong>
+						<%= repo.watchers %>
+					</span>
+					<span>
+						<strong>Since:</strong>
+						<%= repo.created_at %>
+					</span>
+					<span>
+						<strong>Forks:</strong>
+						<%= repo.forks %>
+					</span>
+					<span>
+						<strong>Open issues:</strong>
+						<%= repo.issues %>
+					</span>
+				</article>
+			</section>
 			<aside class="box__aside">
 				<a href="<%= repo.url %>" class="box__button" target="_blank">Github</a>
 				<a href="<%= repo.site %>" class="box__button" target="_blank">Site</a>
