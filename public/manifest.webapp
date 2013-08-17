@@ -11,7 +11,7 @@
     "128": "/images/node-web-modules-icon-128.png"
   },
   "developer": {
-    "name": "Caio Ribeiro Pereira"
+    "name": "Caio Ribeiro Pereira",
     "url": "http://nodewebmodules.com"
   },
   "installs_allowed_from": ["*"],
