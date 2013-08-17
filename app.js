@@ -7,6 +7,7 @@ const PORT = (process.env.PORT || 3000)
 
 var express = require('express')
 	, site = require('./config.json')
+	, fs = require('fs')
 	, cron = require('./lib/cron_task')()
 	, wms = require('./lib/web_modules_scrap')()
 	, app = module.exports = express()
@@ -14,12 +15,17 @@ var express = require('express')
 
 wms.update();
 
-app.use(express.logger('dev'));
+app.use(express.logger());
 app.set('views', VIEWS);
 app.set('view engine', 'ejs');
 app.use(express.compress(GZIP));
 app.use(app.router);
 app.use(express.static(PUBLIC, MAXAGE));
+
+app.get('/*.webapp', function (req, res, next) {
+  res.header('Content-Type', 'application/x-web-app-manifest+json');
+  next();
+});
 
 app.get('/', function(req, res) {
 	var domain = (req.protocol+'://'+req.host);
