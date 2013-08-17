@@ -19,13 +19,13 @@ var express = require('express')
 app.use(express.logger());
 app.set('views', VIEWS);
 app.set('view engine', 'ejs');
-app.use(express.compress(GZIP));
 app.use(app.router);
+app.use(express.compress(GZIP));
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/manifest.webapp', function (req, res) {
-  fs.readFile(MANIFEST, 'utf8', function(err, out) {
-  	res.header('Content-Type', 'application/x-web-app-manifest+json');
+  fs.readFile(MANIFEST, function(err, out) {
+  	res.set('Content-Type', 'application/x-web-app-manifest+json');
   	res.end(out);
   });
 });

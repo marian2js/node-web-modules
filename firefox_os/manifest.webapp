@@ -2,12 +2,12 @@
   "name": "NWM",
   "description": "Node Web Modules - A collection of web modules for Node.js",
   "version": "1.0",
-  "launch_path": "http://nodewebmodules.com/",
+  "launch_path": "/",
   "installs_allowed_from": ["*"],
   "default_locale": "en",
   "icons": {
-    "60": "http://nodewebmodules.com/images/nwm-ffos-logo-60.png",
-    "128": "http://nodewebmodules.com/images/nwm-ffos-logo-128.png"
+    "60": "/images/nwm-ffos-logo-60.png",
+    "128": "/images/nwm-ffos-logo-128.png"
   },
   "developer": {
     "name": "Caio Ribeiro Pereira",
