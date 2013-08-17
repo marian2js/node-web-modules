@@ -11,14 +11,18 @@ See this example:
 ```
 
 * Take a screenshot about main site or blog module, put it in the `public/images` directory.
-The image must be a PNG format with 220x160 size and named with the same github repository name.
-Using the example before, if I added the `connect` module, my printscreen must be named as `connect.png`.
+The image must be:
+** PNG format;
+** 220x160 size;
+** Named with the same github repository name;
+
+* Using the example before, if I added the `connect` module the printscreen must be named as `connect.png`.
 
 * All modules data is consumed and updated daily from a Github API (http://developer.github.com) and stored in a Redis key-store database.
 
 ## Rules
 
-Only web modules for node.js will be included.
+Only web modules for node.js like MVC, Micro, Real-time and Rest frameworks will be included.
 
 ## TODO
 
