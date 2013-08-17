@@ -2,7 +2,7 @@ const PORT = (process.env.PORT || 3000)
 		, VIEWS = __dirname + '/views'
 		, PUBLIC = __dirname + '/public'
 		, STYLUS = __dirname + '/stylus'
-		, MANIFEST = PUBLIC + '/manifest.webapp'
+		, MANIFEST = __dirname + '/firefox_os/manifest.webapp'
 		, MAXAGE = {maxAge: 60 * 60 * 1000}
 		, GZIP = {level: 9, memLevel: 9}
 
