@@ -24,8 +24,8 @@ app.use(express.compress(GZIP));
 app.use(express.static(PUBLIC, MAXAGE));
 
 app.get('/manifest.webapp', function (req, res) {
-  fs.readFile(MANIFEST, function(err, out) {
-  	res.set('Content-Type', 'application/x-web-app-manifest+json');
+  fs.readFile(MANIFEST, 'utf8', function(err, out) {
+  	res.set('Content-Type', 'application/x-web-app-manifest+json; charset=utf-8');
   	res.end(out);
   });
 });
