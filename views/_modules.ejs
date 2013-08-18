@@ -1,9 +1,9 @@
 <% modules.forEach(function(repo, index) { %>
 	<section class="box">
-		<header class="box__header js-web-module-header">
+		<header class="box__header js-box-module-header">
 			<h1><%=: repo.name | capitalize %></h1>
 		</header>
-		<div class="box__main js-web-module-main">
+		<div class="box__main js-box-module-main">
 			<section class="box__content">
 				<figure class="box__figure">
 					<a href="<%= repo.url %>" target="_blank">

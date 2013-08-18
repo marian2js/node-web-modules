@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       tmp: {
         src: [
             "uglify/lib/*.js"
-          , "uglify/nwm.js"
+          , "uglify/nbm.js"
           , "uglify/modules/*.js"
           , "uglify/application.js"
         ],

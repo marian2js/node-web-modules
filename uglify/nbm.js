@@ -1,3 +1,3 @@
 (function() {
-	window.NWM = {};
+	window.NBM = {};
 })();
