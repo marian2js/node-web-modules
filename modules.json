@@ -23,9 +23,7 @@
 	, "webjs": "iwillwen/webjs"
 	, "express.io": "techpines/express.io"
 	, "spine": "spine/spine"
-	, "somajs": "somajs/somajs"
 	, "stapes": "hay/stapes"
 	, "grasshopper": "tuxychandru/grasshopper"
-	, "spacemagic": "xcoderzach/spacemagic"
 	, "turtle.io": "avoidwork/turtle.io"
 }
