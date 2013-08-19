@@ -6,36 +6,48 @@
 		<div class="box__main js-box-module-main">
 			<section class="box__content">
 				<figure class="box__figure">
-					<a href="<%= repo.url %>" target="_blank">
+					<a href="<%= repo.site %>" target="_blank">
 						<img src="<%= repo.image %>" class="box__image" width="220" height="160">
 					</a>
 				</figure>
 				<article class="box__detail">
 					<span><%= repo.description %></span>
 					<span>
-						<strong>Author:</strong>
-						<a href="<%= repo.author_url %>" target="_blank"><%=: repo.author | capitalize%></a>
+						<strong>Author: </strong>
+						<a href="mailto:<%= repo.author_email %>" target="_blank"><%=: repo.author | capitalize%></a>
 					</span>
 					<span>
-						<strong>Watchers:</strong>
+						<strong>Version: </strong>
+						<%= repo.version %>
+					</span>
+					<span>
+						<strong>Watchers: </strong>
 						<%= repo.watchers %>
 					</span>
 					<span>
-						<strong>Since:</strong>
+						<strong>Contributors: </strong>
+						<%= repo.contributors %>
+					</span>
+					<span>
+						<strong>Since: </strong>
 						<%= repo.created_at %>
 					</span>
 					<span>
-						<strong>Forks:</strong>
+						<strong>Forks: </strong>
 						<%= repo.forks %>
 					</span>
 					<span>
-						<strong>Open issues:</strong>
+						<strong>Open issues: </strong>
 						<%= repo.issues %>
 					</span>
+					<span>
+						<strong>Install: </strong>
+						<%= repo.install %>
 				</article>
 			</section>
 			<aside class="box__aside">
-				<a href="<%= repo.url %>" class="box__button" target="_blank">Github</a>
+				<a href="<%= repo.gh_url %>" class="box__button" target="_blank">Github</a>
+				<a href="<%= repo.npm_url %>" class="box__button" target="_blank">NPM</a>
 				<a href="<%= repo.site %>" class="box__button" target="_blank">Site</a>
 			</aside>
 		</div>
