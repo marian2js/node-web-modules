@@ -14,7 +14,7 @@ var express = require('express')
 	, app = module.exports = express()
 ;
 
-wms.update();
+//wms.update();
 
 app.use(express.logger());
 app.set('views', VIEWS);
