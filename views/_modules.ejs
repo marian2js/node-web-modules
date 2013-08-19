@@ -14,7 +14,7 @@
 					<span><%= repo.description %></span>
 					<span>
 						<strong>Author: </strong>
-						<a href="mailto:<%= repo.author_email %>" target="_blank"><%=: repo.author | capitalize%></a>
+						<a href="<%= repo.author_npm %>" target="_blank"><%=: repo.author | capitalize %></a>
 					</span>
 					<span>
 						<strong>Version: </strong>
