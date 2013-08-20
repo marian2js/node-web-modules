@@ -9,7 +9,6 @@
 	, "kiss.js": "stanislavfeldman/kiss.js"
 	, "locomotive": "jaredhanson/locomotive"
 	, "matador": "obvious/matador"
-	, "meteor": "meteor/meteor"
 	, "partial.js": "petersirka/partial.js"
 	, "sails": "balderdashy/sails"
 	, "socketstream": "socketstream/socketstream"
